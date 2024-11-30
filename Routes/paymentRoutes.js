@@ -1,12 +1,3 @@
-// const express = require("express");
-// const { createCheckoutSession } = require("../Controllers/PaymentController");
-// const router = express.Router();
-
-// router.post("/create-checkout-session", createCheckoutSession);
-
-// module.exports = router;
-
-
 const express = require("express");
 const { createCheckoutSession } = require("../Controllers/PaymentController");
 const router = express.Router();
