@@ -107,6 +107,9 @@ const cors = require("cors");
 const AuthRouter = require("./Routes/AuthRouter");
 const { connectMongoDB } = require("./config/connection");
 require("dotenv").config();
+// const { paymentRoutes } = require("./Routes/paymentRoutes"); // Import from "./Routes/paymentRoutes";
+const paymentRoutes = require("./Routes/paymentRoutes"); // Remove destructuring
+
 
 // console.log("JWT_SECRET:", process.env.JWT_SECRET);
 
@@ -134,6 +137,8 @@ app.use((req, res, next) => {
 
 // Use the Auth, diet plan, and user profile routes
 app.use("/auth", AuthRouter);
+// Routes
+app.use("/api", paymentRoutes);
 
 
 // Global error handler
